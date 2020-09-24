@@ -1,0 +1,9 @@
+import pathlib
+
+
+ROOT_PATH = pathlib.Path(__file__).parents[1]
+IMAGES_PATH = ROOT_PATH / "images"
+
+SPI_SET_DESKTOP_WALLPAPER = 0x0014
+SPIF_UPDATE_INI_FILE = 0x01
+SPIF_SEND_WIN_INI_CHANGE = 0x02
