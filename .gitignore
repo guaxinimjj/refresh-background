@@ -1,5 +1,14 @@
-.idea/
-.env
-*/__pycache__/*
-logs/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Environemnt
 venv/
+.env
+
+# Static
+images/
+
+# Other
+.idea/
+logs/
