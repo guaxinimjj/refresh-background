@@ -19,20 +19,21 @@ SPIF_UPDATE_INI_FILE = 0x01
 SPIF_SEND_WIN_INI_CHANGE = 0x02
 
 
-def get_img() -> dict:
+def get_img(query) -> dict:
     """Download images from Unsplash.com."""
-
     url = "https://api.unsplash.com/photos/random"
-    params = {}
+    params = {
+        "query": query,
+    }
     headers = {"Authorization": f"Client-ID {UNSPLASH_ACCESS_KEY}"}
 
     resp = requests.get(url, params=params, headers=headers)
     return resp.json()
 
 
-def save_img() -> str:
+def save_img(query) -> str:
     """Save image and return path like str."""
-    body = get_img()
+    body = get_img(query)
 
     image_url = body["urls"]["full"]
     image_id = "{}.jpg".format(body["id"])
