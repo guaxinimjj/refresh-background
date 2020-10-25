@@ -13,5 +13,5 @@ pip install -r requirements.txt
 ### Run the app
 
 ```commandline
-python -m app --interval 1
+python -m app --interval 2
 ```
